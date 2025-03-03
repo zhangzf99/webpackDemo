@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require("vue-loader/dist")
 
 module.exports = {
-  mode: 'development', // 指定为开发模式
   // 入口文件
   entry: { 
     main: './src/main.js'
@@ -16,14 +15,7 @@ module.exports = {
     filename: 'js/chunk-[contenthash].js', // 使用由生成的内容产生的hash
     clean: true // 打包时自动覆盖原来的dist，不需要手动删除
   },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist')
-    },
-    compress: true,
-    port: 3000,
-    open: true
-  },
+  
   plugins: [
     // HtmlWebpackPlugin - 打包index.html文件
     new HtmlWebpackPlugin({  

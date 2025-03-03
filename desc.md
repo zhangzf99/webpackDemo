@@ -1,5 +1,5 @@
 https://blog.csdn.net/weixin_46714216/article/details/140741361
-## 第一次提交内容
+### 第一次提交内容
 #### 1、搭建的脚手架
 
   ```js
@@ -119,4 +119,17 @@ npm i webpack-dev-server -D
     "serve": "webpack serve"
  },
 ```
+
+### 第二次提交
+1、配置webpack的开发环境和生产环境
+
+```js
+npm install --save-dev webpack-merge
+
+在Webpack项目中，通常会有一个webpack.config.common.js文件作为公共配置，然后针对开发环境（development）和生成环境（production）分别创建webpack.config.dev.js和webpack.config.prod.js。为了在开发环境和生产环境中都能引入和使用这个公共配置，可以通过在各自的配置文件中合并（merge）公共配置来实现。
+```
+
+
+
+
 
