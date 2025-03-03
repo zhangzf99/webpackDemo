@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      msg: '我是文字1111'
+      msg: '我是文字22311'
     }
   }
 }

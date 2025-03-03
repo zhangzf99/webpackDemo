@@ -11,7 +11,8 @@ module.exports = merge(commonConfig, {
     },
     compress: true,
     port: 3000,
-    open: true
+    open: true,
+    hot: true  // 热重载
   },
   plugins: [
     
