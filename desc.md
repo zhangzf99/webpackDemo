@@ -121,7 +121,7 @@ npm i webpack-dev-server -D
 ```
 
 ### 第二次提交
-1、配置webpack的开发环境和生产环境
+#### 1、配置webpack的开发环境和生产环境
 
 ```js
 npm install --save-dev webpack-merge
@@ -129,7 +129,25 @@ npm install --save-dev webpack-merge
 在Webpack项目中，通常会有一个webpack.config.common.js文件作为公共配置，然后针对开发环境（development）和生成环境（production）分别创建webpack.config.dev.js和webpack.config.prod.js。为了在开发环境和生产环境中都能引入和使用这个公共配置，可以通过在各自的配置文件中合并（merge）公共配置来实现。
 ```
 
+### 第三次提交
 
+#### 1、clean-webpack-plugin
+
+清除构建目录中的旧文件，以确保每次构建时都能得到一个干净的环境。
+
+```js
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
+new CleanWebpackPlugin()
+```
+
+#### 2、webpack-bundle-analyzer
+
+```js
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+new BundleAnalyzerPlugin()
+```
 
 
 

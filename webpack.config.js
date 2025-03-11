@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require("vue-loader/dist")
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   // 入口文件
@@ -23,7 +24,8 @@ module.exports = {
       filename: 'index.html', // 打包以后的名称
       inject: 'body' // js插入到body
     }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    // new BundleAnalyzerPlugin()
   ],
   module: {
     rules: [

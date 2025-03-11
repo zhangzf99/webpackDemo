@@ -1,6 +1,9 @@
 <template>
   <div class="add">
     {{ msg }}
+    <div class="box">
+      我是图片
+    </div>
   </div>
 </template>
 
@@ -14,8 +17,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
   .add {
     color: aqua;
+    .box {
+      color: red;
+    }
   }
 </style>
